@@ -9,13 +9,8 @@ MsgBox, ,, Script loaded. Activate WoW and press F11 to start tagboosting!, 3
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 WinGet, wowid, ID, World of Warcraft
 SetKeyDelay, 0
-
-;===================================================================
-
 CoordMode,Pixel,Screen ; Use screen coordinates
 CoordMode,Mouse,Screen ; 
-
-;===================================================================
 
 $F11::
 if (enable := !enable)
