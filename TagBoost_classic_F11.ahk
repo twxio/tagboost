@@ -1,0 +1,68 @@
+﻿; #include TagBoost_classic_config.ahk
+; Square coordinates
+; Screenshot -> open paint -> CTRL+V easy way to get coordinates
+global square_x:=3475
+global square_y:=511
+;===================================================================
+#SingleInstance force
+MsgBox, ,, Script loaded. Activate WoW and press F11 to start tagboosting!, 3
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+WinGet, wowid, ID, World of Warcraft
+SetKeyDelay, 0
+
+;===================================================================
+
+CoordMode,Pixel,Screen ; Use screen coordinates
+CoordMode,Mouse,Screen ; 
+
+;===================================================================
+
+$F11::
+if (enable := !enable)
+  setTimer, Tag, -1
+return
+
+^F11:: 
+    ExitApp
+return
+
+F12::
+MouseGetPos, square_x, square_y 
+MsgBox, ,, Square 1 set!, 1
+return
+
+Tag:
+while enable
+{
+  ifWinExist, ahk_id %wowid%
+  {  
+	; Cleartarget, assist macro
+    ControlSend,, 1, ahk_id %wowid%
+	
+	; Read WA info
+	; The name of the variable in which to store the color ID in 
+	; hexadecimal blue-green-red (BGR) format. 
+	; For example, the color purple is defined 0x800080 because 
+	; it has an intensity of 80 for its blue and red components
+    ; but an intensity of 00 for its green component.
+	; Set RGB to match Weakauras 
+	PixelGetColor, color, square_x, square_y, RGB
+	; MsgBox The color at the current cursor position is %color%.
+	; Seperate RGB into range (0-255)
+	blue := (color & 0xFF)
+	green := ((color & 0xFF00) >> 8)
+	red := ((color & 0xFF0000) >> 16)
+	
+	;if (red > 200) {
+	;	ControlSend,, 1, ahk_id %wowid%
+	;}
+	; Green = Valid target send macro 2
+	; Attack with pet
+	if (green > 200) { 
+		ControlSend,, 2, ahk_id %wowid%
+	}	
+    Sleep 1000  
+  }
+}
+return
+
