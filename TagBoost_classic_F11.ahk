@@ -28,7 +28,7 @@ return
 
 F12::
 MouseGetPos, square_x, square_y 
-MsgBox, ,, Square 1 set!, 1
+MsgBox, ,, Square coords set!, 1
 return
 
 Tag:
@@ -39,23 +39,14 @@ while enable
 	; Cleartarget, assist macro
     ControlSend,, 1, ahk_id %wowid%
 	
-	; Read WA info
-	; The name of the variable in which to store the color ID in 
-	; hexadecimal blue-green-red (BGR) format. 
-	; For example, the color purple is defined 0x800080 because 
-	; it has an intensity of 80 for its blue and red components
-    ; but an intensity of 00 for its green component.
+	; Read WA info	
 	; Set RGB to match Weakauras 
 	PixelGetColor, color, square_x, square_y, RGB
-	; MsgBox The color at the current cursor position is %color%.
 	; Seperate RGB into range (0-255)
 	blue := (color & 0xFF)
 	green := ((color & 0xFF00) >> 8)
 	red := ((color & 0xFF0000) >> 16)
 	
-	;if (red > 200) {
-	;	ControlSend,, 1, ahk_id %wowid%
-	;}
 	; Green = Valid target send macro 2
 	; Attack with pet
 	if (green > 200) { 
