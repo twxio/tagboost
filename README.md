@@ -48,12 +48,13 @@ WA can decide:
 	is target attacking boostie petattack
 	
 
-Edit script to set efault coordinates coordinates or
+Edit script to set default coordinates coordinates or
 use F12 to set square coords
 
-/ltp af  boostie
-
-
+Do when following boostie, requires leatrix plus
+```
+/ltp af  
+```
 set boostie name in weakaura custom options
 
 set boostie name in macro
@@ -77,4 +78,3 @@ Keep Red/green square somewhere visible on screen!
 F11 to start/stop script
 CTRL+F11 to exit script
 F12 to set square coordinates
-	`
