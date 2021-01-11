@@ -1,15 +1,13 @@
 # tagboost
- Tag Boosting in WoW
+Tag Boosting in WoW
 
+## 243
  _243_1
 	send 1 every x ms to client
 	
 _dualbox_123
 	allows 1,2,3 to be broadcasted to multiple clients
-	
-_classic_1_F11
-	sends 1 every x ms to client
-	
+		
 243 Boosting:
 Must rename window to "ZWorld of Warcraft"
 MurGee Window Title Changer Setup after opening 243 clients
@@ -22,13 +20,18 @@ bind macro to 1
 /assist boostie
 /cast arcane shot
 ```
+## Classic
+
+_classic_1_F11
+	sends 1 every x ms to client
+
 	
 Classic Boosting:
 Group boostie with online alt in same Zone.
 Kill tapped targets with petattack
 
 bind macro to 1
-```` 
+``` 
 /assist boostie
 /petattack
 ```
@@ -59,7 +62,7 @@ Bind to 1
 ```
 /cleartarget
 /assist Boostiename
-``
+```
 
 Bind to 2
 ```
