@@ -3,6 +3,16 @@ Tag Boosting in WoW
 
 https://streamable.com/q03ox3
 
+TODO:
+
+Problem:
+	Boostie cant get tag but has aggro
+Solution:
+	Use screech to get aggro but do not tag!
+WA: blue color if has aggro but not tagged
+Ingame: Use screech to get aggro while boostie tries to tag
+	macro 3: /petpassive use screech
+	macro 2: add /petdefensive
 ## Classic
 
 Script with WA
