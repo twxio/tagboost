@@ -5,23 +5,23 @@ global square_x:=3475
 global square_y:=511
 ;===================================================================
 #SingleInstance force
-MsgBox, ,, Script loaded. Activate WoW and press F11 to start tagboosting!, 3
+MsgBox, ,, Script loaded. Activate WoW and press F12 to start tagboosting!, 3
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 WinGet, wowid, ID, World of Warcraft
 SetKeyDelay, 0
 CoordMode,Pixel,Screen ; Use screen coordinates
 CoordMode,Mouse,Screen ; 
 
-$F11::
+$F12::
 if (enable := !enable)
   setTimer, Tag, -1
 return
 
-^F11:: 
+^F12:: 
     ExitApp
 return
 
-F12::
+F10::
 MouseGetPos, square_x, square_y 
 MsgBox, ,, Square coords set!, 1
 return
@@ -47,7 +47,7 @@ while enable
 	if (green > 200) { 
 		ControlSend,, 2, ahk_id %wowid%
 	}	
-    Sleep 1000  
+    Sleep 200 
   }
 }
 return
