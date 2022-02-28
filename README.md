@@ -1,7 +1,7 @@
 # tagboost
 Tag Boosting in WoW
 
-<s>https://streamable.com/q03ox3</s>
+https://youtu.be/R7P-Smd_5t4
 
 TODO:
 Issues:
